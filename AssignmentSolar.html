@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+ <title>Calender</title>
+ <link rel="stylesheet" type = "text/css" href="style.css">
+ 
+ 
+</head>
+<body>
+   
+    <div class = "grid">
+        <div class = "grid-item">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-header" style="align-items:center">Year
+                    </div>
+                    <div class = "card">
+                        <input type="checkbox" id="year11" name="year1" value="2021"  onclick="checkMe()"> 2021 <br>
+                        
+                        <div id = "21months" style="display: none" >
+                               <input type="checkbox" id = "janApr21" name="Jan-Apr" onclick="checkMe1MonthJanApril()"> Jan-Apr<br>
+                          
+                              <div id="2021JanApr" name="JanApril" style="display:none">
+                                  January:  <input type="number" name="Jan" value="0" class="Jan"> <br>
+                                  Feburary: <input type="number" name="Feb" value="0"> <br>
+                                  March:    <input type="number" name="Mar" value="0"> <br>
+                                  April:    <input type="number" name="Apr" value="0"> <br>
+                                  <input type="button"  onclick="calculate()"  value="Calculate">
+                                  <input type="reset"   onclick="reset()" ><br>
+                              </div>
+                      
+                          <input type="checkbox" id = "mayAug21" name="May-Aug" onclick="checkMe1MonthMayAug()">May-Aug<br>
+                              <div id = "2021MayAug" style="display:none">
+                              May:    <input type="number" name="May" value="0"> <br>
+                              June:   <input type="number" name="Jun" value="0"> <br>
+                              July:   <input type="number" name="Jul" value="0"> <br>
+                              August: <input type="number" name="Aug" value="0"> <br>
+                              <input type="button" onclick="calculate()" value="Calculate">
+                              <input type="reset" onclick="reset()" ><br>
+                              </div >         
+                              
+                                 
+                              <input type="checkbox" id = "septDec21"name="Sept-Dec" onclick="checkMe1MonthSeptDec()">Sept-Dec<br>
+                             <div id="2021SeptDec" style="display:none">
+                              September: <input type="number" name="Sept" value="0"> <br>
+                              Ocotber:   <input type="number" name="Oct" value="0"> <br>
+                              November:  <input type="number" name="Nov" value="0"> <br>
+                              December:  <input type="number" name="Dec" value="0"> <br>
+                              <input type="button" onclick="calculate()" value="Calculate">
+                              <input type="reset" onclick="reset()"><br>
+                          </div>    
+                              
+                        </div>
+                    </div>
+                      <div class="card">
+                        <input type="checkbox" id="year12" name="year2" value=“2022" onclick="checkMe2()"> 2022 <br>
+                        <div id="22months" style="display: none"> 
+                             <input type="checkbox" id="janApr22" name="Jan-Apr" onclick="checkMe2MonthJanApril()">Jan-Apr<br>
+                             <div id ="2022JanApr"name="JanApril" style="display: none">
+                                 January: <input type="number" name="Jan" value="0"> <br>
+                                 Feburary: <input type="number" name="Jan" value="0"> <br>
+                                 March: <input type="number" name="Jan" value="0"> <br>
+                                 April: <input type="number" name="Jan" value="0"> <br>
+                                 <input type="button" onclick="calculate()" value="Calculate">
+                                 <input type="reset" onclick="reset()" ><br>
+                             </div>
+                             
+                             <input type="checkbox" id = "mayAug22"name="May-Aug" onclick="checkMe2MonthMayAug()">May-Aug<br>
+                             <div id = "2022MayAug" style="display:none">
+                                 May:    <input type="number" name="May" value="0"> <br>
+                                 June:   <input type="number" name="Jun" value="0"> <br>
+                                 July:   <input type="number" name="Jul" value="0"> <br>
+                                 August: <input type="number" name="Aug" value="0"> <br>
+                                 <input type="button" onclick="calculate()" value="Calculate">
+                                 <input type="reset" onclick="reset()" value="Reset"><br>
+                             </div >         
+                                 
+                                    
+                                 <input type="checkbox" id="septDec22" name="Sept-Dec" onclick="checkMe2MonthSeptDec()">Sept-Dec<br>
+                             <div id="2022SeptDec" style="display:none">
+                                 September: <input type="number" name="Sept" value="0"> <br>
+                                 Ocotber:   <input type="number" name="Oct" value="0"> <br>
+                                 November:  <input type="number" name="Nov" value="0"> <br>
+                                 December:  <input type="number" name="Dec" value="0"> <br>
+                                 <input type="button" onclick="calculate()" value="Calculate">
+                                 <input type="reset" onclick="reset()" value="Reset"><br>
+                             </div>   
+                         </dd>
+                     
+                    </div>
+                    </div>
+                    <div class="card">
+                      
+                         
+                      
+                          <input type="checkbox" id = "year13"name="year3" value=“2023" onclick="checkMe3()"> 2023 <br>
+                          <div id = "23months" style="display: none">
+                           <input type="checkbox" id="janApr23" name="Jan-Apr" onclick="checkMe3MonthJanApril()" >Jan-Apr<br>
+                            <div id="2023JanApr" name="JanApril" style="display:none">
+                              January:  <input type="number" name="Jan" value="0"> <br>
+                              Feburary: <input type="number" name="Feb" value="0"> <br>
+                              March:    <input type="number" name="Mar" value="0"> <br>
+                              April:    <input type="number" name="Apr" value="0"> <br>
+                              <input type="button"  id = "cal" onclick="calculate()" value="Calculate" >
+                              <input type="reset"   id = "res" onclick="reset()" value="Reset"><br>
+                      </div>
+                  
+                      <input type="checkbox" id="mayAug23" name="May-Aug" onclick="checkMe3MonthMayAug()">May-Aug<br>
+                      <div id="2023MayAug" style="display:none">
+                          May:    <input type="number" name="May" value="0"> <br>
+                          June:   <input type="number" name="Jun" value="0"> <br>
+                          July:   <input type="number" name="Jul" value="0"> <br>
+                          August: <input type="number" name="Aug" value="0"> <br>
+                          <input type="button" onclick="calculate()" value="Calculate">
+                          <input type="reset" onclick="reset()" value="Reset"><br>
+                      </div >         
+                          
+                             
+                          <input type="checkbox" id="septDec23" name="Sept-Dec" onclick="checkMe3MonthSeptDec()">Sept-Dec<br>
+                      <div id="2023SeptDec" style="display:none">
+                          September: <input type="number" name="Sept" value="0"> <br>
+                          Ocotber:   <input type="number" name="Oct" value="0"> <br>
+                          November:  <input type="number" name="Nov" value="0"> <br>
+                          December:  <input type="number" name="Dec" value="0"> <br>
+                          <input type="button" onclick="calculate()" value="Calculate">
+                          <input type="reset" onclick="reset()" value="Reset"><br>
+                      </div> 
+                      </div>
+                    </div>
+                       
+                           
+                        
+                    
+                
+          </div>
+     </div>
+</div> 
+    </div>
+   
+</body>
+<script src="calculate.js">
+
+
+</script>
